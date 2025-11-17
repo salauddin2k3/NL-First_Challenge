@@ -34,7 +34,7 @@ TypeScript–এর দুটি গুরুত্বপূর্ণ ফিচ�
 
 ---
 
-### 🔵 Union Type Example (A বা B)
+🔵 Union Type Example (A বা B)
 
 ```
 let userId: string | number;
