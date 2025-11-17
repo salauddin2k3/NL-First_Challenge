@@ -113,7 +113,7 @@ function printBookDetails(book: Book) {
 
     const finalRisult = `Title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: ${checkingAvailble}`;
 
-    return finalRisult;
+    console.log(finalRisult)
 };
 
 
