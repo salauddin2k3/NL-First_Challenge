@@ -21,6 +21,8 @@ TypeScript-এ `interface` এবং `type` — উভয়ই অবজেক�
 
 
 ---
+---
+---
 
 
 
@@ -34,7 +36,60 @@ TypeScript–এর দুটি গুরুত্বপূর্ণ ফিচ�
 
 ### 🔵 Union Type Example (A বা B)
 
-`let userId: string | number;
+```
+let userId: string | number;
 
 userId = "A-101"; // ✔
-userId = 101;     // ✔`
+userId = 101;     // ✔
+```
+
+🔵 Intersection Type Example (A & B)
+
+```
+type Person = {
+  name: string;
+};
+
+type Employee = {
+  salary: number;
+};
+
+type Staff = Person & Employee;
+
+const staffInfo: Staff = {
+  name: "Salauddin",
+  salary: 40000,
+};
+```
+
+🔵 Union এবং Intersection একসাথে Example
+
+```
+type BasicInfo = {
+  name: string;
+};
+
+type Address = {
+  city: string;
+  country: string;
+};
+
+type Contact = {
+  phone: string;
+};
+
+// Union Example
+type UserId = string | number;
+
+// Intersection Example
+type FullUser = BasicInfo & Address & Contact;
+
+const user: FullUser = {
+  name: "Ahmed",
+  city: "Dhaka",
+  country: "Bangladesh",
+  phone: "01700000000"
+};
+```
+
+
